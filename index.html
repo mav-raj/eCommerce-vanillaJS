@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
+	<title>eBazar</title>
+</head>
+
+<body onload="getUser()">
+	<!-- header start -->
+	<header>
+		<div class="container">
+			<nav>
+				<div class="logo">
+					<span class="title"> <a href="/index.html">eBazar</a></span>
+					<span class="icon"><i class="material-icons">shopping_cart</i></span>
+				</div>
+				<div class="nav-link">
+					<ul>
+						<li class="nav-item"><a href="/auth/login.html" id="loginButton">Login</a></li>
+						<li class="nav-item" id="basket-container"><i class="material-icons">shopping_basket</i><span id="basket"></span></li>
+						<li class="nav-item"><a onclick="getCart()" id="cartName"></a></li>
+						<li class="nav-item"><a onclick="logout()" id="logoutButton">Logout</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- header end -->
+
+	<!-- main start -->
+	<main class="container">
+		<!-- <div class="welcome-text"><h3 id="welcome-text"></h3></div> -->
+		<div class="category-bar">
+			<div class="nav-link center">
+					<ul>
+						<li id="cat-all" class="nav-item active"><a onclick="getAll()">All</a></li>
+						<li id="cat-mob" class="nav-item" ><a onclick="getMobiles()">Mobiles</a></li>
+						<li id="cat-lap" class="nav-item"><a onclick="getLaptops()">Laptops</a></li>
+					</ul>
+			</div>
+		</div>
+		<div class="flex-container">
+			<div class="product-list-container" id="product-container"></div>
+		</div>
+	</main>
+	<!-- main end -->
+
+	<!-- footer start -->
+	<footer>
+		<div class="container">
+			<div class="footer-container">
+				<div class="foot-col-social">
+					<div class="social-text">
+						<p>Follow us on:</p>
+					</div>
+					<ul class="social">
+						<li><a href="#" class="foot-icons facebook"></a></li>
+						<li><a href="" class="foot-icons twitter"></a></li>
+						<li><a href="" class="foot-icons instagram"></a></li>
+						<li><a href="" class="foot-icons tumblr"></a></li>
+					</ul>
+				</div>
+				<div class="foot-col-text">
+					<p>Call us toll free on: +91 99-9999-9999</p>
+				</div>
+				<div class="foot-col-newsletter">
+					<div class="newsletter-text">
+						<p>For offers and newsletter:</p>
+					</div>
+					<div class="newsletter-input">
+						<input type="email" class="foot-input" placeholder="example@abc.com" />
+					</div>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="footer-text">
+				<p>
+					Design & developed by Rishi Raj | Copyright 2019 |
+					<a href="">Privacy Policy</a> | <a href="">Return Policy</a>
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- footer end -->
+	<script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link
+	  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	  rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="../style.css" />
+	<title>eBazar</title>
+  </head>
+
+  <body>
+	<!-- header start -->
+	<header>
+	  <div class="container">
+		<nav>
+		  <div class="logo">
+			<span class="title"> <a href="/index.html">eBazar</a></span>
+			<span class="icon"
+			  ><i class="material-icons">shopping_cart</i></span
+			>
+		  </div>
+		  <div class="nav-link">
+			<ul>
+				<li class="nav-item"><a href="/index.html">Home</a></li>
+			  <li class="nav-item"><a href="/auth/login.html">Login</a></li>
+			</ul>
+		  </div>
+		</nav>
+	  </div>
+	</header>
+	<!-- header end -->
+
+	<!-- main start -->
+	<main class="container auth-main">
+	  <div class="card">
+		<div class="card-tile">
+		  <h3>Signup Here</h3>
+		</div>
+		<div class="card-content">
+		  <form action="javascript:register()" class="form-container">
+			<input
+			  class="form-input"
+			  type="text"
+			  name="firstName"
+			  id="firstName"
+			  placeholder="First Name"
+			  required
+			/>
+			<input
+			  class="form-input"
+			  type="text"
+			  name="lastName"
+			  id="lastName"
+			  placeholder="Last Name"
+			  required
+			/>
+			<input
+			  class="form-input"
+			  type="email"
+			  name="email"
+			  id="email"
+			  placeholder="example@abc.com"
+			  required
+			/>
+			<input
+			  class="form-input"
+			  type="password"
+			  name="password"
+			  id="password"
+			  placeholder="Password"
+			  required
+			/>
+			<!-- <input
+			  class="form-input"
+			  type="text"
+			  name="role"
+			  id="role"
+			  placeholder="Role"
+			  required
+			/> -->
+			<select name="role" id="role" class="form-input select">
+				<option disabled selected >Select Role</option>
+				<option value="user">User</option>
+				<option value="admin">Admin</option>
+			</select>
+			<span class="hint-text">e.g user, admin etc..</span>
+			<!-- <input class="form-input" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required /> -->
+			<!-- <input type="button" class="btn" onclick="register()" value="Sign Up"> -->
+			<button type="submit" class="btn">Register</button>
+			<!-- <button class="btn" onclick="disp()">View</button> -->
+			<!-- <button class="btn" onclick="del()">Delete LS</button> -->
+		  </form>
+		</div>
+	  </div>
+	</main>
+	<!-- main end -->
+
+	<!-- footer start -->
+	<footer>
+	  <div class="container">
+		<div class="footer-container">
+		  <div class="foot-col-social">
+			<div class="social-text">
+			  <p>Follow us on:</p>
+			</div>
+			<ul class="social">
+			  <li><a href="#" class="foot-icons facebook"></a></li>
+			  <li><a href="" class="foot-icons twitter"></a></li>
+			  <li><a href="" class="foot-icons instagram"></a></li>
+			  <li><a href="" class="foot-icons tumblr"></a></li>
+			</ul>
+		  </div>
+		  <div class="foot-col-text">
+			<p>Call us toll free on: +91 99-9999-9999</p>
+		  </div>
+		  <div class="foot-col-newsletter">
+			<div class="newsletter-text">
+			  <p>For offers and newsletter:</p>
+			</div>
+			<div class="newsletter-input">
+			  <input
+				type="email"
+				class="foot-input"
+				placeholder="example@abc.com"
+			  />
+			</div>
+		  </div>
+		</div>
+		<div class="line"></div>
+		<div class="footer-text">
+		  <p>
+			Design & developed by Rishi Raj | Copyright 2019 |
+			<a href="">Privacy Policy</a> | <a href="">Return Policy</a>
+		  </p>
+		</div>
+	  </div>
+	</footer>
+	<!-- footer end -->
+	<script src="/auth/auth.js"></script>
+  </body>
+</html>
