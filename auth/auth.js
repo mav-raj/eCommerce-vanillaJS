@@ -59,7 +59,6 @@ function login() {
 		sessionStorage.setItem('currUserName', user.name.split(' ')[0]);
 		sessionStorage.setItem('currUserId', user.id);
 		sessionStorage.setItem('currUserEmail', user.email);
-		sessionStorage.setItem('currUserPass', user.password);
 		sessionStorage.setItem('isAuthenticated', true);
 		window.location = '/'
 	} else {
