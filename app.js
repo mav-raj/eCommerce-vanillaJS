@@ -13,17 +13,14 @@ function getUser() {
 		document.getElementById('loginButton').style.display = 'none';
 		document.getElementById('cartName').innerHTML = sessionStorage.getItem('currUserName') + '\'s Cart';
 
-		// document.getElementById('welcome-text').innerHTML = "Welcome " + sessionStorage.getItem('currUserName') + ", let's shop!";
-
 	} else {
 		document.getElementById('cartName').innerHTML = "Cart";
-		// document.getElementById('welcome-text').innerHTML = "Welcome, let's shop!";
 		document.getElementById('logoutButton').style.display = 'none';
 		document.getElementById('basket-container').style.display = 'none';
 		loadJSON(PATH);
 	};
+	// getting all products on the main page.
 	getAll();
-	// renderProducts();
 }
 
 // Fetch data from products.json and store to local storage
@@ -53,6 +50,7 @@ function getCart() {
 	}
 }
 
+// Adding removing active class funtionality to categories
 function getAll() {
 	renderProducts();
 	document.getElementById('cat-mob').classList.remove('active');
@@ -66,12 +64,17 @@ function getMobiles() {
 	document.getElementById('cat-lap').classList.remove('active');
 	document.getElementById('cat-mob').classList.add('active');
 }
+
+
 function getLaptops() {
 	renderProducts('laptop');
 	document.getElementById('cat-all').classList.remove('active');
 	document.getElementById('cat-mob').classList.remove('active');
 	document.getElementById('cat-lap').classList.add('active');
 }
+
+
+// render products based on given categories
 function renderProducts(cat) {
 	let productContainer = document.getElementById('product-container');
 	productContainer.innerHTML = "";
@@ -118,8 +121,7 @@ function renderProducts(cat) {
 
 }
 
-
-
+// Add the item with the product id to the current user's cart
 function addToCart(prodId) {
 	if(sessionStorage.getItem('isAuthenticated')) {
 		let currUserId = sessionStorage.getItem('currUserId');
